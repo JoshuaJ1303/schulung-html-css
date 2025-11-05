@@ -1,0 +1,16 @@
+a {
+text-decoration: none;
+color:black;
+}   
+
+a:hover{
+    text-decoration: underline ;
+    color: blueviolet; 
+    font-size: larger;
+}
+
+div::first-letter {
+    margin: 5px;
+    font-size: larger;
+}
+

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section class="promo">
+        <a class="btn cta x"> test</a>
+    </section>
+    
+    <nav class="promo">
+        <a class="btn">asdasd</a>
+    </nav>
+
+    <style>
+        /*  */
+        @layer base, components, theme;
+
+        @layer base {
+            .btn {
+                background: #ddd;
+                color: #222;
+            }
+        }
+        @layer theme {
+            .btn.cta.x {
+                background: red; 
+             }
+        }
+
+        @layer components {
+            .promo .btn{
+                background: lightblue; 
+            }
+        }
+    </style>
+
+</body>
+</html>

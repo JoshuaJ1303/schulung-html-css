@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>überschrit</h1>
+    <div class="text-blue text-red">Die Reihenfolge ist relevant in style oder css file</div>
+    <div class="type-selector text-blue text-red">Die Reihenfolge ist relevant in style oder css file</div>
+
+    <style>
+        /* Die höhere Spezifizität gewinnt in dem Fall 0,1,1 */
+        div.text-red {
+            color:orange;
+        }
+
+        div {
+            color:yellow;
+        }
+
+        .text-red {
+            color: red; 
+            
+        }
+        .text-blue {
+            color: blue;
+        }
+    </style>
+</body>
+</html>

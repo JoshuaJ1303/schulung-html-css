@@ -1,0 +1,21 @@
+.test-big {
+    font-size: large;
+}
+div {
+    font-family: "Arial Narrow";
+}
+
+/* test */
+div[id="test"] {
+    color: red;
+}
+
+body {
+    background-color: aquamarine;
+}
+
+/* oder unabhängig von inhalt: [data-violet] */
+[data-violet="ja"] {
+    background: violet;
+}
+

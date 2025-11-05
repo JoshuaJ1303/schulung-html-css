@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS_grid</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header"> kopf</header>
+        <main class="content"> haupt</main>
+        <div class="temp">temporary</div>
+        <aside class="sidebar">sidebar</aside>
+        <footer class="footer printer">footer</footer>
+    </div>
+    <style>
+        html, body {
+            margin: 0;
+            height: 100%;
+        }
+
+        .container {
+            display: flex;
+            flex-flow: wrap;
+            justify-content:space-between;
+            text-align: center; 
+            
+            /* border: solid;  */
+            height:100%;
+            
+        }
+
+        .header{
+            width:100%; 
+            background-color: rgb(7, 218, 255);
+            order:-1;
+        }
+
+        .footer  {
+            width:100%; 
+             background-color: green;
+             order:1;
+
+        }
+        
+        .sidebar {
+            width: 25%;
+            background-color: rgb(255, 5, 88);
+        }
+
+        .temp {
+            width: 25%;
+        }
+
+        .content {
+            background-color: rgb(230, 255, 8);
+            width: 50%
+        }
+
+        .header, .footer, .temp,  .sidebar, .content {
+            /* padding: 20px;  */
+            /* background-color: #f0f0f0; */
+            /* border: 1px solid #ddd;
+            box-sizing:content-box; */
+            place-content: center; 
+        }
+
+        @media print {
+            .printer {
+                height: 50%;
+                background: red;
+                font-size: 100px;  
+
+            }
+        }
+
+        @media screen and (min-width:601px) and (max-width:1024px) {
+            
+            .content {
+                width: 75%;
+                background: rgb(255, 0, 255);
+            }
+        }
+
+        @media screen and (max-width:600px) {
+            
+            .content {
+                width: 100%;
+                background: rgb(255, 0, 255);
+            }
+            .sidebar{
+                display:none; 
+            }
+        }
+     
+     
+
+ 
+    </style>
+
+</body>
+</html>

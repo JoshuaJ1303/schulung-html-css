@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS_grid</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header"> kopf</header>
+        <aside class="sidebar">sidebar</aside>
+        <main class="content"> haupt</main>
+        <footer class="footer">footer</footer>
+    </div>
+    <style>
+        html, body {
+            margin: 0;
+            height: 100%;
+        }
+
+        .header, .footer {
+            grid-column: 1 / -1; 
+        }
+
+        .sidebar {
+            grid-row: 2/3; 
+        }
+
+        .content {
+            grid-row: 2/3; 
+        }
+
+        .header, .footer, .sidebar, .content {
+            padding: 20px; 
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+        }
+
+        .container {
+            display: grid;
+            border: solid; 
+            grid-template-columns: 1fr 3fr;
+            grid-template-rows: auto 1fr auto;
+            height:100%;
+        }
+        
+    </style>
+
+</body>
+</html>
